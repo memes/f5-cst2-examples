@@ -2,3 +2,7 @@
 .envrc
 .direnv
 .tool-versions
+
+# Ruby/kitchen ignores
+.bundle
+Gemfile.lock
