@@ -1,0 +1,64 @@
+# yamllint disable rule:line-length
+---
+imports:
+  - path: https://raw.githubusercontent.com/F5Networks/f5-google-gdm-templates-v2/v2.1.0.0/examples/failover/failover-existing-network.py
+resources:
+  - name: failover-py
+    type: https://raw.githubusercontent.com/F5Networks/f5-google-gdm-templates-v2/v2.1.0.0/examples/failover/failover-existing-network.py
+    properties:
+      ## START OF MANDATORY CONFIGURATION CHANGES
+      ##
+      ### Static IPs to be allocated to external interface (nic0).
+      bigIpExternalSelfIp01: 172.16.0.11
+      bigIpExternalSelfIp02: 172.16.0.12
+      ### Static IP address to use for peering; this should match the external
+      ### static address assigned to one of the BIG-IP pairs. E.g. same as
+      ### bigIpExternalSelfIp01
+      bigIpPeerAddr: 172.16.0.11
+      ### Static IPs to be allocated to internal interface (nic2)
+      bigIpInternalSelfIp01: 172.18.0.11
+      bigIpInternalSelfIp02: 172.18.0.12
+      ### Static IPs to be allocated to management interface (nic1)
+      bigIpMgmtAddress01: 172.17.0.11
+      bigIpMgmtAddress02: 172.17.0.12
+      ### URL to the runtime-init configuration to apply to BIG-IP instances
+      ### NOTE: This URL must be resolvable and reachable from the BIG-IP instances
+      bigIpRuntimeInitConfig01: >-
+        https://raw.githubusercontent.com/memes/f5-cst2-examples/example/failover-3nic-byol/failover-3nic-byol/runtime-init-config-bigip1.yaml
+      bigIpRuntimeInitConfig02: >-
+        https://raw.githubusercontent.com/memes/f5-cst2-examples/example/failover-3nic-byol/failover-3nic-byol/runtime-init-config-bigip2.yaml
+      ### Compute Engine machine type to use
+      bigIpInstanceType: n1-standard-4
+      ### The existing VPC networks and subnets that will be attached to the BIG-IP instances
+      networks:
+        mgmtNetworkName: emes-gdm-management
+        externalNetworkName: emes-gdm-external
+        internalNetworkName: emes-gdm-internal
+      subnets:
+        mgmtSubnetName: emes-gdm-management-us-we1
+        appSubnetName: emes-gdm-external-us-we1
+        internalSubnetName: emes-gdm-external-us-we1
+      ### Region in which to deploy the BIG-IP instances
+      region: us-west1
+      ### Access to management interface, and ingress to the load balanced application(s)
+      ### will be limited to these CIDRs.
+      restrictedSrcAddressMgmt:
+        - 70.181.103.42/32
+      restrictedSrcAddressApp:
+        - 70.181.103.42/32
+      ##
+      ## END OF MANDATORY CONFIGURATION CHANGES
+      ## START OF OPTIONAL CONFIGURATION CHANGES
+      ##
+      bigIpImageName: f5-bigip-16-1-2-2-0-0-28-byol-ltm-1boot-loc-220505073441
+      application: example-application
+      bigIpRuntimeInitPackageUrl: >-
+        https://cdn.f5.com/product/cloudsolutions/f5-bigip-runtime-init/v1.4.1/dist/f5-bigip-runtime-init-1.4.1-1.gz.run
+      cfeTag: bigip_high_availability_solution
+      cfeBucket: f5-cfe-state
+      cost: f5-demos
+      environment: dev
+      group: gsa
+      owner: m_dot_emes_at_f5_dot_com
+      provisionPublicIp: false
+      uniqueString: emes-cst20-cfe-3nic
