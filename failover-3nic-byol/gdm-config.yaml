@@ -50,7 +50,7 @@ resources:
       ## END OF MANDATORY CONFIGURATION CHANGES
       ## START OF OPTIONAL CONFIGURATION CHANGES
       ##
-      bigIpImageName: f5-bigip-16-1-2-2-0-0-28-byol-ltm-1boot-loc-220505073441
+      bigIpImageName: f5-bigip-16-1-2-2-0-0-28-byol-all-modules-1boot-loc-0505073727
       application: example-application
       bigIpRuntimeInitPackageUrl: >-
         https://cdn.f5.com/product/cloudsolutions/f5-bigip-runtime-init/v1.4.1/dist/f5-bigip-runtime-init-1.4.1-1.gz.run
