@@ -11,10 +11,6 @@ resources:
       ### Static IPs to be allocated to external interface (nic0).
       bigIpExternalSelfIp01: 172.16.0.11
       bigIpExternalSelfIp02: 172.16.0.12
-      ### Static IP address to use for peering; this should match the external
-      ### static address assigned to one of the BIG-IP pairs. E.g. same as
-      ### bigIpExternalSelfIp01
-      bigIpPeerAddr: 172.16.0.11
       ### Static IPs to be allocated to internal interface (nic2)
       bigIpInternalSelfIp01: 172.18.0.11
       bigIpInternalSelfIp02: 172.18.0.12

@@ -37,7 +37,6 @@ extension_services:
           My_Provisioning:
             class: Provision
             ltm: nominal
-            asm: nominal
           My_Ntp:
             class: NTP
             servers:
@@ -131,7 +130,6 @@ extension_services:
           My_Provisioning:
             class: Provision
             ltm: nominal
-            asm: nominal
           My_Ntp:
             class: NTP
             servers:
