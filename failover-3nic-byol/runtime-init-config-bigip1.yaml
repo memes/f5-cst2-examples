@@ -231,7 +231,7 @@ extension_services:
             class: DeviceTrust
             localUsername: admin
             localPassword: '{{{BIGIP_PASSWORD}}}'
-            remoteHost: '{{{REMOTE_HOST}}}'
+            remoteHost: /Common/failoverGroup/members/0
             remoteUsername: admin
             remotePassword: '{{{BIGIP_PASSWORD}}}'
 pre_onboard_enabled: []
@@ -258,12 +258,6 @@ runtime_parameters:
   - name: UNIQUE
     type: url
     value: http://169.254.169.254/computeMetadata/v1/instance/attributes/unique-string
-    headers:
-      - name: Metadata-Flavor
-        value: Google
-  - name: REMOTE_HOST
-    type: url
-    value: http://169.254.169.254/computeMetadata/v1/instance/attributes/bigip-peer-addr
     headers:
       - name: Metadata-Flavor
         value: Google
