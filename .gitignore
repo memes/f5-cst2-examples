@@ -2,6 +2,3 @@
 .envrc
 .direnv
 .tool-versions
-
-# Ignore generated binaries in dist
-dist/
