@@ -37,7 +37,7 @@ resources:
       subnets:
         mgmtSubnetName: emes-gdm-management-us-we1
         appSubnetName: emes-gdm-external-us-we1
-        internalSubnetName: emes-gdm-external-us-we1
+        internalSubnetName: emes-gdm-internal-us-we1
       ### Region in which to deploy the BIG-IP instances
       region: us-west1
       ### Access to management interface, and ingress to the load balanced application(s)

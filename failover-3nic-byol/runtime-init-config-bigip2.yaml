@@ -52,7 +52,7 @@ extension_services:
           My_System:
             autoPhonehome: true
             class: System
-            hostname: '{{{HOST}}}'
+            hostname: '{{{NAME}.example'
           My_License:
             class: License
             licenseType: regKey
@@ -146,7 +146,7 @@ extension_services:
           My_System:
             autoPhonehome: true
             class: System
-            hostname: '{{{HOST}}}'
+            hostname: '{{{NAME}.example'
           admin:
             class: User
             userType: regular
@@ -243,9 +243,9 @@ runtime_parameters:
       type: SecretsManager
       version: latest
       secretId: emes-gdm-bigip-password
-  - name: HOST
+  - name: NAME
     type: url
-    value: http://169.254.169.254/computeMetadata/v1/instance/hostname
+    value: http://169.254.169.254/computeMetadata/v1/instance/name
     headers:
       - name: Metadata-Flavor
         value: Google
