@@ -52,7 +52,7 @@ extension_services:
           My_System:
             autoPhonehome: true
             class: System
-            hostname: '{{{NAME}.example'
+            hostname: '{{{NAME}}}.example'
           My_License:
             class: License
             licenseType: regKey
@@ -146,7 +146,7 @@ extension_services:
           My_System:
             autoPhonehome: true
             class: System
-            hostname: '{{{NAME}.example'
+            hostname: '{{{NAME}}}.example'
           admin:
             class: User
             userType: regular
