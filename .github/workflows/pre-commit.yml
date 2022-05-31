@@ -15,6 +15,8 @@ permissions:
 jobs:
   pre-commit:
     runs-on: ubuntu-latest
+    env:
+      BUNDLE_WITH: dev
     steps:
       - uses: actions/checkout@v3
       - name: install talisman
@@ -22,4 +24,8 @@ jobs:
           sudo curl -sLo /usr/local/bin/talisman https://github.com/thoughtworks/talisman/releases/download/v1.27.0/talisman_linux_amd64
           sudo chmod 0755 /usr/local/bin/talisman
       - uses: actions/setup-python@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.2
+          bundler-cache: true
       - uses: pre-commit/action@v2.0.3
