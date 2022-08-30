@@ -8,3 +8,7 @@ fileignoreconfig:
   checksum: 5f9f6ac048d51c1eb0342f18c43da48ce8bfe2d036d7e3870b507ede3c9edbce
 - filename: failover-3nic-byol/runtime-init-config-bigip2.yaml
   checksum: 7e859089e6d738386028da88e9ea8e721e4db8ff13d44aefed4ca00513d6cf1c
+- filename: failover-2nic-byol/runtime-init-config-bigip1.yaml
+  checksum: 350dae7c65a85d6554784cb18aa08ac9680f26d8eb5ccc3a88d42c6b1040c847
+- filename: failover-2nic-byol/runtime-init-config-bigip2.yaml
+  checksum: f4bc7b1c6943e66966c725b8ec1d849fafef5dfd2f9db47999826e5f0e724b8b
