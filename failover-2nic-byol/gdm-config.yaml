@@ -20,8 +20,6 @@ resources:
       bigIpMgmtAddress02: 172.17.0.12
       ### Peer to first instance's external IP
       bigIpPeerAddr: 172.16.0.11
-      intCIDRs:
-        - '172.16.0.0/24'
       ### URL to the runtime-init configuration to apply to BIG-IP instances
       ### NOTE: This URL must be resolvable and reachable from the BIG-IP instances
       bigIpRuntimeInitConfig01: >-

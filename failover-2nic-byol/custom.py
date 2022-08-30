@@ -231,7 +231,10 @@ def create_dag_deployment(context):
                         "description": "Allow web traffic to internal app network",
                         "name": context.properties["uniqueString"] + "-app-int-fw",
                         "network": internal_net_ref,
-                        "sourceRanges": [context.properties["intCIDRs"]],
+                        "sourceTags": [
+                            generate_name(prefix, "app-int-fw"),
+                            generate_name(prefix, "app-int-vip-fw"),
+                        ],
                         "targetTags": [
                             generate_name(prefix, "app-int-fw"),
                             generate_name(prefix, "app-int-vip-fw"),
