@@ -2,21 +2,22 @@
 # Copyright 2021 F5 Networks All rights reserved.
 
 info:
-  author: F5 Networks
-  description: Creates a pair of bigip's HA deployment along with all required resources to support deployment.
+  author: Matt Emes
+  description: Creates a pair of bigip's HA deployment in multiple AZs
   title: F5 Failover Existing Network template
   version: 2.4.0.0
 
 imports:
-  - path: failover-existing-network.py
-  - path: ../modules/access/access.py
-  - path: ../modules/bigip-standalone/bigip_standalone.py
-  - path: ../modules/dag/dag.py
+  - path: custom.py
+  - path: https://raw.githubusercontent.com/F5Networks/f5-google-gdm-templates-v2/v2.4.0.0/examples/modules/access/access.py
+  - path: https://raw.githubusercontent.com/F5Networks/f5-google-gdm-templates-v2/v2.4.0.0/examples/modules/bigip-standalone/bigip_standalone.py
+  - path: https://raw.githubusercontent.com/F5Networks/f5-google-gdm-templates-v2/v2.4.0.0/examples/modules/dag/dag.py
 
 required:
   - restrictedSrcAddressMgmt
   - networks
   - subnets
+  - zones
 
 properties:
   application:

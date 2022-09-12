@@ -16,7 +16,7 @@ def create_access_deployment(context):
     """Create template deployment."""
     deployment = {
         "name": "access",
-        "type": "../modules/access/access.py",
+        "type": "access.py",
         "properties": {
             "solutionType": "failover",
             "uniqueString": context.properties["uniqueString"],
@@ -118,7 +118,7 @@ def create_bigip_deployment(context, num_nics, instance_number):
     bigip_config = [
         {
             "name": "bigip-failover-0" + str(instance_number),
-            "type": "../modules/bigip-standalone/bigip_standalone.py",
+            "type": "bigip_standalone.py",
             "properties": {
                 "additionalMetadataTags": additionalMetadataTags,
                 "bigIpRuntimeInitConfig": context.properties[
@@ -229,7 +229,7 @@ def create_dag_deployment(context, num_nics):
     dag_configuration = [
         {
             "name": "dag",
-            "type": "../modules/dag/dag.py",
+            "type": "dag.py",
             "properties": {
                 "firewalls": [
                     {
