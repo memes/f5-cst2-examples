@@ -105,11 +105,11 @@ extension_services:
           logLevel: silly
         externalStorage:
           scopingTags:
-            f5_cloud_failover_label: bigip_high_availability_solution
+            f5_cloud_failover_label: emes-decex-azs
         failoverAddresses:
           enabled: true
           scopingTags:
-            f5_cloud_failover_label: bigip_high_availability_solution
+            f5_cloud_failover_label: emes-decex-azs
           requireScopingTags: false
     - extensionType: do
       type: inline
