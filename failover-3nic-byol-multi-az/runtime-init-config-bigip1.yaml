@@ -218,8 +218,8 @@ extension_services:
             class: DeviceGroup
             type: sync-failover
             members:
-              - '{{{HOST}}}'
-              - '{{{UNIQUE}}}-bigip-vm-02.c.{{{PROJECT_ID}}}.internal'
+              - 172.16.0.11
+              - 172.16.0.12
             owner: /Common/failoverGroup/members/0
             autoSync: true
             saveOnAutoSync: false
