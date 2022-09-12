@@ -55,7 +55,7 @@ extension_services:
           My_License:
             class: License
             licenseType: regKey
-            regKey: REPLACE_WITH_VALID_REGKEY
+            regKey: BFKPY-UBHSE-ZZDWT-EUYVW-PGPFEOZ
           admin:
             class: User
             userType: regular
