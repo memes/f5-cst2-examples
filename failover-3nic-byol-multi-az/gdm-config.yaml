@@ -58,11 +58,11 @@ resources:
       application: example-application
       bigIpRuntimeInitPackageUrl: >-
         https://cdn.f5.com/product/cloudsolutions/f5-bigip-runtime-init/v1.5.0/dist/f5-bigip-runtime-init-1.5.0-1.gz.run
-      cfeTag: emes-decex-cfe-3nic-byol-azs
-      cfeBucket: emes-decex-cfe-3nic-byol-azs
+      cfeTag: emes-decex-azs
+      cfeBucket: emes-decex-azs
       cost: f5-demos
       environment: dev
       group: gsa
       owner: m_dot_emes_at_f5_dot_com
       provisionPublicIp: false
-      uniqueString: emes-decex-cfe-3nic-byol-azs
+      uniqueString: emes-decex-azs
