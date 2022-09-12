@@ -24,9 +24,9 @@ resources:
       ### URL to the runtime-init configuration to apply to BIG-IP instances
       ### NOTE: This URL must be resolvable and reachable from the BIG-IP instances
       bigIpRuntimeInitConfig01: >-
-        https://raw.githubusercontent.com/memes/f5-declarative-examples/examples/3nic-byol-existing-multi-az/failover-3nic-byol-multi-az/runtime-init-config-bigip1.yaml
+        https://raw.githubusercontent.com/memes/f5-declarative-examples/main/failover-3nic-byol-multi-az/runtime-init-config-bigip1.yaml
       bigIpRuntimeInitConfig02: >-
-        https://raw.githubusercontent.com/memes/f5-declarative-examples/examples/3nic-byol-existing-multi-az/failover-3nic-byol-multi-az/runtime-init-config-bigip2.yaml
+        https://raw.githubusercontent.com/memes/f5-declarative-examples/main/failover-3nic-byol-multi-az/runtime-init-config-bigip2.yaml
       ### Compute Engine machine type to use
       bigIpInstanceType: n1-standard-4
       ### The existing VPC networks and subnets that will be attached to the BIG-IP instances
